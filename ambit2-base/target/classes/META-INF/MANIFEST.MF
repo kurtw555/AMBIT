@@ -1,0 +1,13 @@
+Manifest-version: 1.0
+Package: ambit2.base
+
+Name: ambit2/base/
+Specification-Title: ambit2.base
+Specification-Version: 3.3.0-SNAPSHOT
+Specification-Vendor: Ideaconsult LTD
+Implementation-Title: ambit2.base
+Implementation-Version: 3.3.0-SNAPSHOT-${buildNumber}-${timestamp}
+Implementation-Vendor: Ideaconsult Ltd.
+Package-Title: ambit2.base
+Package-Version: 3.3.0-SNAPSHOT
+Package-Vendor: Ideaconsult Ltd.
