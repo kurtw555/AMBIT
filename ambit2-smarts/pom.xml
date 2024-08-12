@@ -11,10 +11,30 @@
   <name>ambit2-smarts</name>
   <description>Implementation of a SMARTS parser.</description>
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.openscience.cdk/cdk-smiles -->
+    <dependency>
+      <groupId>org.openscience.cdk</groupId>
+      <artifactId>cdk-smiles</artifactId>
+      <version>2.9</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openscience.cdk</groupId>
+      <artifactId>cdk-isomorphism</artifactId>
+      <version>2.9</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.openscience.cdk/cdk-smarts -->
+    <dependency>
+      <groupId>org.openscience.cdk</groupId>
+      <artifactId>cdk-smarts</artifactId>
+      <version>2.9</version>
+    </dependency>
     <dependency>
       <groupId>ambit</groupId>
       <artifactId>ambit2-core</artifactId>
-      <version>${project.version}</version>
+      <version>1.0</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/lib/ambit2-core.jar</systemPath>
       <type>jar</type>
     </dependency>
     <dependency>

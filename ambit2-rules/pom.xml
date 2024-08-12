@@ -9,12 +9,21 @@
 	<artifactId>ambit2-rules</artifactId>
 	<name>ambit2-rules</name>
 	<dependencies>
-		<dependency>
+	<!--	<dependency>
 			<groupId>ambit</groupId>
 			<artifactId>ambit2-base</artifactId>
 			<version>${project.version}</version>
 			<type>jar</type>
 		</dependency>
+	-->
+		<dependency>
+			<groupId>ambit</groupId>
+			<artifactId>ambit2-base</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/ambit2-base.jar</systemPath>
+		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>

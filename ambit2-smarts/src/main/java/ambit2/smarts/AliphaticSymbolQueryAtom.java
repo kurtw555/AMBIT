@@ -27,8 +27,8 @@ package ambit2.smarts;
 import org.openscience.cdk.CDKConstants;
 import org.openscience.cdk.interfaces.IAtom;
 import org.openscience.cdk.interfaces.IChemObjectBuilder;
-import org.openscience.cdk.isomorphism.matchers.smarts.SMARTSAtom;
-
+//import org.openscience.cdk.isomorphism.matchers.smarts.SMARTSAtom;
+import org.openscience.cdk.smarts.
 /**
  * 
  * @author Nikolay Kochev nick@uni-plovdiv.bg
@@ -43,6 +43,29 @@ public class AliphaticSymbolQueryAtom extends SMARTSAtom {
 
 	public boolean matches(IAtom atom) {
 
+		if (!atom.getFlag(CDKConstants.ISAROMATIC)
+				&& this.getSymbol().equals(atom.getSymbol())) {
+			return true;
+		} else
+			return false;
+	};
+
+	public String toString() {
+		return "AliphaticSymbolQueryAtom()";
+	}
+}
+
+public class AliphaticSymbolQueryAtom2  {
+
+	private static final long serialVersionUID = -18004315234561145L;
+	private IChemObjectBuilder _builder = null;
+	public AliphaticSymbolQueryAtom2(IChemObjectBuilder builder)
+	{
+		_builder = builder;
+	}
+
+	public boolean matches(IAtom atom) {
+		SMARTSQueryTool querytool = new SMARTSQueryTool
 		if (!atom.getFlag(CDKConstants.ISAROMATIC)
 				&& this.getSymbol().equals(atom.getSymbol())) {
 			return true;
