@@ -28,12 +28,12 @@ import org.openscience.cdk.CDKConstants;
 import org.openscience.cdk.interfaces.IAtom;
 import org.openscience.cdk.interfaces.IChemObjectBuilder;
 //import org.openscience.cdk.isomorphism.matchers.smarts.SMARTSAtom;
-import org.openscience.cdk.smarts.
+import org.openscience.cdk.smarts.SmartsPattern;
 /**
  * 
  * @author Nikolay Kochev nick@uni-plovdiv.bg
  */
-public class AliphaticSymbolQueryAtom extends SMARTSAtom {
+public class AliphaticSymbolQueryAtom2 extends SMARTSAtom {
 
 	private static final long serialVersionUID = -18004315234561145L;
 
@@ -55,17 +55,17 @@ public class AliphaticSymbolQueryAtom extends SMARTSAtom {
 	}
 }
 
-public class AliphaticSymbolQueryAtom2  {
+public class AliphaticSymbolQueryAtom  {
 
 	private static final long serialVersionUID = -18004315234561145L;
 	private IChemObjectBuilder _builder = null;
-	public AliphaticSymbolQueryAtom2(IChemObjectBuilder builder)
+	public AliphaticSymbolQueryAtom(IChemObjectBuilder builder)
 	{
 		_builder = builder;
 	}
 
 	public boolean matches(IAtom atom) {
-		SMARTSQueryTool querytool = new SMARTSQueryTool
+		Pattern pattern = SmartsPattern.create(String.valueOf(atom));
 		if (!atom.getFlag(CDKConstants.ISAROMATIC)
 				&& this.getSymbol().equals(atom.getSymbol())) {
 			return true;
